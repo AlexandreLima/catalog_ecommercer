@@ -1,0 +1,8 @@
+/home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/bin/Debug/netcoreapp1.1/EcommercerCatalog.deps.json
+/home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/bin/Debug/netcoreapp1.1/EcommercerCatalog.runtimeconfig.json
+/home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/bin/Debug/netcoreapp1.1/EcommercerCatalog.runtimeconfig.dev.json
+/home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/obj/Debug/netcoreapp1.1/EcommercerCatalog.AssemblyInfo.cs
+/home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/bin/Debug/netcoreapp1.1/EcommercerCatalog.dll
+/home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/obj/Debug/netcoreapp1.1/EcommercerCatalog.dll
+/home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/obj/Debug/netcoreapp1.1/EcommercerCatalog.pdb
+/home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/bin/Debug/netcoreapp1.1/obj/Debug/netcoreapp1.1/EcommercerCatalog.pdb
