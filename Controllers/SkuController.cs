@@ -15,8 +15,8 @@ namespace EcommercerCatalog.Controllers
             this.skuEntityService = skuEntityService;
         }
         
-        [HttpGet]
-        public async Task<List<Sku>> ObterSkusPorGrupo(string searchQuery)
+        [HttpGet("get/category")]
+        public async Task<List<Sku>> GetByCategory(string searchQuery)
         {
             return await this.skuEntityService.FindByGroup(searchQuery);
         }
