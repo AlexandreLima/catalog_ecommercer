@@ -5,4 +5,4 @@
 /home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/bin/Debug/netcoreapp1.1/EcommercerCatalog.dll
 /home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/obj/Debug/netcoreapp1.1/EcommercerCatalog.dll
 /home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/obj/Debug/netcoreapp1.1/EcommercerCatalog.pdb
-/home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/bin/Debug/netcoreapp1.1/obj/Debug/netcoreapp1.1/EcommercerCatalog.pdb
+/home/alexandre/Documentos/JetBrains IDE/EcommercerCatalog/bin/Debug/netcoreapp1.1/EcommercerCatalog.pdb

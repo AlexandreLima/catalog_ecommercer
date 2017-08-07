@@ -2,6 +2,9 @@
 using EcommercerCatalog.Application.Entity.Implementation;
 using EcommercerCatalog.Application.Tasks.Contracts.Sku;
 using EcommercerCatalog.Application.Tasks.Implements.Sku;
+using EcommercerCatalog.Infraestruture.Configuration;
+using EcommercerCatalog.Infraestruture.Data.DataBaseContext.Contracts;
+using EcommercerCatalog.Infraestruture.Data.DataBaseContext.Impl;
 using EcommercerCatalog.Infraestruture.Data.Repository.Contracts.Sku;
 using EcommercerCatalog.Infraestruture.Data.Repository.Impl.Mongo.Sku;
 using Microsoft.AspNetCore.Builder;
@@ -9,6 +12,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MongoDB.Driver;
 
 namespace EcommercerCatalog
 {
@@ -18,7 +22,7 @@ namespace EcommercerCatalog
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
@@ -35,6 +39,11 @@ namespace EcommercerCatalog
             services.AddTransient<IImportSkuTaskService, ImportSkuTaskService>();
             services.AddTransient<ISkuEntityService, SkuEntityService>();
             services.AddTransient<ISkuRepository, SkuRepository>();
+            services.AddSingleton<IConfiguration>(Configuration);
+            services.AddOptions();
+            services.Configure<MongoConfigurationManager>(Configuration);
+            services.AddTransient<ICatalogMongoDbContext, CatalogMongoDbContext>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,5 +54,6 @@ namespace EcommercerCatalog
 
             app.UseMvc();
         }
+        
     }
 }
