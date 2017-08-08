@@ -15,7 +15,7 @@ namespace EcommercerCatalog.Infraestruture.Data.DataBaseContext.Impl
         
         private IConfiguration _configuration;
         
-        public CatalogMongoDbContext(MongoConfigurationManager config , IConfiguration configuration)
+        public CatalogMongoDbContext(IConfiguration configuration)
         {
            this._mongoClient = new MongoClient("mongodb://localhost:27017");
            this._mongoDatabase = _mongoClient.GetDatabase("CatalogDb");

@@ -40,8 +40,6 @@ namespace EcommercerCatalog
             services.AddTransient<ISkuEntityService, SkuEntityService>();
             services.AddTransient<ISkuRepository, SkuRepository>();
             services.AddSingleton<IConfiguration>(Configuration);
-            services.AddOptions();
-            services.Configure<MongoConfigurationManager>(Configuration);
             services.AddTransient<ICatalogMongoDbContext, CatalogMongoDbContext>();
 
         }
