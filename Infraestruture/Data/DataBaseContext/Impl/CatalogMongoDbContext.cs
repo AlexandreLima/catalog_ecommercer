@@ -10,12 +10,8 @@ namespace EcommercerCatalog.Infraestruture.Data.DataBaseContext.Impl
     {
         private MongoClient _mongoClient;
         private IMongoDatabase _mongoDatabase;
-        
         private string skuCollectionName = "skuCollection";
-        
-        private IConfiguration _configuration;
-        
-        public CatalogMongoDbContext(IConfiguration configuration)
+        public CatalogMongoDbContext()
         {
            this._mongoClient = new MongoClient("mongodb://localhost:27017");
            this._mongoDatabase = _mongoClient.GetDatabase("CatalogDb");
